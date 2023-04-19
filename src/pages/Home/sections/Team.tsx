@@ -19,35 +19,10 @@ const Team = () => {
         <div className=" flex justify-evenly text-lg gap-4 flex-wrap">
           {mockTeamMain.map((item: any, id: number) => {
             return (
-              <div className=" m-mt relative max-w-[400px] " key={`news-${id}`}>
-                <img
-                  src={item.imgUrl}
-                  draggable="false"
-                  className="relative w-full px-[16%]"
-                ></img>
-                <div className="aspect-[5/2] relative -mt-[3%]">
-                  <img
-                    src="/images/box-team.png"
-                    draggable="false"
-                    className="absolute top-0 left-0 w-full h-full"
-                  ></img>
-                  <div className="m-box relative">
-                    <div className=" text-lg m-font text-center ">
-                      {item.name}
-                    </div>
-                    <div className="mt-[3%] text-base text-center">
-                      {item.role}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className=" flex justify-evenly text-lg gap-4 flex-wrap">
-          {mockTeamArt.map((item: any, id: number) => {
-            return (
-              <div className=" m-mt relative max-w-[400px] " key={`news-${id}`}>
+              <div
+                className=" m-mt relative max-w-[500px] md:min-w-[350px]"
+                key={`news-${id}`}
+              >
                 <img
                   src={item.imgUrl}
                   draggable="false"

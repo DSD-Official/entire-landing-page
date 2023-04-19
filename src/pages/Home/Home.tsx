@@ -26,7 +26,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="relative w-full bg-back text-white scroll-smooth">
+    <div className="relative w-full bg-back text-white scroll-smooth overflow-y-hidden">
       <ParticleBack />
       <Navbar />
       <Main />
