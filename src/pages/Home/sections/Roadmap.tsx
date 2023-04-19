@@ -44,8 +44,8 @@ const Roadmap = () => {
                   }
                   draggable="false"
                   className={
-                    "absolute top-0 -left-[10%] w-[100%] max-w-none aspect-[5/3] hidden md:block " +
-                    (id !== 2 ? "md:w-[150%] md:aspect-[6.25/3]" : "")
+                    "absolute top-0 -left-[10%] w-[100%] max-w-none aspect-[5/3] hidden lg:block " +
+                    (id !== 2 ? "lg:w-[150%] lg:aspect-[6.25/3]" : "")
                   }
                   alt="Roadmap Box"
                 ></img>
@@ -53,7 +53,7 @@ const Roadmap = () => {
                   src={"/images/Roadmap Box late.png"}
                   draggable="false"
                   className={
-                    "absolute top-0 -left-[10%] w-[110%] max-w-none aspect-[5/3] block md:hidden "
+                    "absolute top-0 -left-[10%] w-[110%] max-w-none aspect-[5/3] block lg:hidden "
                   }
                   alt="Roadmap Box late"
                 ></img>

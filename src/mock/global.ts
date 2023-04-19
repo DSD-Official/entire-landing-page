@@ -251,9 +251,6 @@ export const mockTeamMain = [
     name: "ANGRY PUPPY",
     role: "The Design Guru",
   },
-];
-
-export const mockTeamArt = [
   {
     imgUrl: "/images/team/nft4.png",
     name: "JANOMI",
@@ -275,3 +272,5 @@ export const mockTeamArt = [
     role: "DESIGNER/DIRECTOR",
   },
 ];
+
+export const mockTeamArt = [];
