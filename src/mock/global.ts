@@ -32,7 +32,7 @@ export const mockMain = [
     content1: "a web3 gaming hub built by the community",
     content2:
       "ddog description here!ddog description here!ddog description here!ddog description here!",
-    button: "MINT NFT",
+    button: "CLAIM YOUR XP",
     imgUrl: "/images/Cards.png",
   },
   {
@@ -74,7 +74,7 @@ export const mockRewards = [
 export const mockabout1 = [
   {
     imgUrl: "/images/png/Volume.png",
-    name: "Total volumn",
+    name: "Total Volume",
     amount: "$XXX,XXX",
   },
   {

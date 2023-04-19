@@ -13,10 +13,11 @@ const Button = (props: any) => {
         src="/images/button-back.png"
         draggable="false"
         className="absolute top-0 left-0 w-full h-full"
+        alt="mint nft"
       />
-      <div className="relative m-text-small font-semibold">
+      <a className="relative m-text-small font-semibold" href="/app">
         {props.text || "Button"}
-      </div>
+      </a>
     </div>
   );
 };
