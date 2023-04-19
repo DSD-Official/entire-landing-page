@@ -160,28 +160,34 @@ export const mockRoadmap = [
   {
     duration: "Q1-Q2 2023",
     data: [
-      { text: "Open Community", result: 1 },
-      { text: "Discord Server", result: 1 },
-      { text: "Moderate the users", result: 1 },
-    ],
-  },
-  {
-    duration: "Q2-Q3 2023",
-    data: [
-      { text: "NFT Minting", result: 1 },
-      { text: "Start Staking", result: 0 },
-      { text: "Airdrop stratege", result: 0 },
+      { text: "Discord opens, early members gain OG role (Whitelist)", result: 1 },
+      { text: "NFT sale", result: 0 },
+      { text: "NFT staking to earn $EBONE", result: 0 },
+      { text: "Release of Crash Game", result: 0 },
     ],
   },
   {
     duration: "Q3-Q4 2023",
     data: [
+      { text: "Release of poker protocol", result: 0 },
+      { text: "Weekly airdrop is activated at >75% of DDogs staked", result: 0 },
+      { text: "Freeroll Turbo Sit & Go tournaments activated", result: 0 },
+    ],
+  },
+  {
+    duration: "Q1 2024",
+    data: [
       {
-        text: "Game protocol Game protocol Game protocol Game protocol Game protocol",
+        text: "Cross-chain collaboration to expand poker player pool",
         result: 0,
       },
-      { text: "Find Partnership", result: 0 },
-      { text: "Final all money", result: 0 },
+      { text: "Development of more games", result: 0 },
+      {
+        text: "Sponsor DDog owners in major online tournaments", result: 0
+      },
+      {
+        text: "More...", result: 0
+      },
     ],
   },
 ];
