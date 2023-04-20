@@ -50,6 +50,9 @@
   .m-font {
     font-family: "Conthrax";
   }
+  .m-app-border {
+    @apply bg-card border-line border-[3px] rounded-lg;
+  }
 }
 
 body {

@@ -13,8 +13,6 @@ const Sidebar = () => {
   const ctx = useContext(LayoutContext);
   const { navWidth } = ctx;
 
-  console.log();
-
   return (
     <div
       className="w-[280px] flex flex-col h-full bg-card border-r-[3px] border-r-line"
@@ -33,6 +31,18 @@ const Sidebar = () => {
             <Win className="w-6 h-6" />
             <h3 className="font-button text-header group-hover:text-white">
               Dashboard
+            </h3>
+          </div>
+        </Link>
+        <Link to="/claim">
+          <div
+            className={`p-3 hover:bg-card2 flex gap-2 items-center rounded-[8px] cursor-pointer anim group ${
+              window.location.pathname === "/claim" && "bg-card2"
+            }`}
+          >
+            <Swap className="w-6 h-6" />
+            <h3 className="font-button text-header group-hover:text-white">
+              Claim XP
             </h3>
           </div>
         </Link>
@@ -60,7 +70,7 @@ const Sidebar = () => {
             </h3>
           </div>
         </Link>
-        <Link to="staking">
+        <Link to="/staking">
           <div
             className={`p-3 hover:bg-card2 flex gap-2 items-center rounded-[8px] cursor-pointer anim group ${
               window.location.pathname === "/staking" && "bg-card2"
@@ -72,10 +82,10 @@ const Sidebar = () => {
             </h3>
           </div>
         </Link>
-        <Link to="claim">
+        <Link to="/reward">
           <div
             className={`p-3 hover:bg-card2 flex gap-2 items-center rounded-[8px] cursor-pointer anim group ${
-              window.location.pathname === "/claim" && "bg-card2"
+              window.location.pathname === "/reward" && "bg-card2"
             }`}
           >
             <Claim className="w-6 h-6" />
