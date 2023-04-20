@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import { LayoutContext } from "./Root";
-import { useGetIsLoggedIn } from "../hooks";
+import { useGetIsLoggedIn, useGetAccountInfo } from "../hooks";
+import { shortenAddress } from "utils";
 
 import { ReactComponent as Ring } from "assets/svg/ring.svg";
 import { ReactComponent as Menu } from "assets/svg/menu.svg";
@@ -43,6 +44,7 @@ const Header = () => {
   const { navOpen, setNavOpen } = ctx;
   const isConnected = useGetIsLoggedIn();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { account } = useGetAccountInfo();
 
   const toggle = () => {
     setNavOpen(!navOpen);
@@ -75,7 +77,7 @@ const Header = () => {
       {isConnected ? (
         <div className="flex items-center gap-2 p-3 border-[3px] border-line rounded-lg">
           <Ledger className="w-6 h-6 cursor-pointer" />
-          <h5 className="text-body font-button cursor-pointer">erd1...2ef5</h5>
+          <h5 className="text-body font-button cursor-pointer">{shortenAddress(account.address)}</h5>
           <h4 className="text-header font-button cursor-pointer">
             4000 $EBONE
           </h4>

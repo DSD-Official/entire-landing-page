@@ -1,6 +1,7 @@
 import ReactPaginate from "react-paginate";
 import { useState, useEffect } from "react";
 import MainLayout from "layouts/MainLayout";
+
 const tableData = [
   { rank: 1, address: "erd130...pmez", xp: "4,000xp" },
   { rank: 2, address: "erd130...pmez", xp: "3,000xp" },
@@ -10,6 +11,7 @@ const tableData = [
   { rank: 6, address: "erd130...pmez", xp: "2,000xp" },
   { rank: 7, address: "erd130...pmez", xp: "2,000xp" },
 ];
+
 const Claim = () => {
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);

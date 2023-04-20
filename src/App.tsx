@@ -3,6 +3,7 @@ import Dashboard from "pages/Dashboard";
 import Home from "pages/Home";
 import Liquidity from "pages/Liquidity";
 import Swap from "pages/Swap";
+import Claim from "pages/Claim/Claim";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DappProvider } from "@multiversx/sdk-dapp/wrappers";
 import { TransactionsToastList } from "@multiversx/sdk-dapp/UI/TransactionsToastList";
@@ -27,6 +28,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/claim" element={<Claim />} />
           <Route path="/app" element={<Dashboard />} />
           <Route path="/swap" element={<Swap />} />
           <Route path="/liquidity" element={<Liquidity />} />
