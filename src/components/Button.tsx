@@ -15,7 +15,7 @@ const Button = (props: any) => {
         className="absolute top-0 left-0 w-full h-full"
         alt="mint nft"
       />
-      <a className="relative m-text-small font-semibold" href="/app">
+      <a className="relative m-text-small font-semibold" href="/claim">
         {props.text || "Button"}
       </a>
     </div>
