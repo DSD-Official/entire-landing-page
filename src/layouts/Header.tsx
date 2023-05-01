@@ -11,6 +11,7 @@ import { ReactComponent as Icon1 } from "assets/svg/wallet-icon-1.svg";
 import { ReactComponent as Icon2 } from "assets/svg/wallet-icon-2.svg";
 import { ReactComponent as Icon3 } from "assets/svg/wallet-icon-3.svg";
 import { ReactComponent as Icon4 } from "assets/svg/wallet-icon-4.svg";
+import { ReactComponent as Close } from "assets/svg/close.svg";
 import Modal from "react-modal";
 
 import {
@@ -73,13 +74,13 @@ const Header = () => {
         onClick={toggle}
       />
       <h3 className="text-header font-input cursor-pointer">Play Poker</h3>
-      <Ring className="min-full h-max cursor-pointer" />
+      <Ring className="min-full h-max cursor-pointer"/>
       {isConnected ? (
         <div className="flex items-center gap-2 p-3 border-[3px] border-line rounded-lg">
           <Ledger className="w-6 h-6 cursor-pointer" />
           <h5 className="text-body font-button cursor-pointer">{shortenAddress(account.address)}</h5>
           <h4 className="text-header font-button cursor-pointer">
-            4000 $EBONE
+            0 $EBONE
           </h4>
         </div>
       ) : (
@@ -96,6 +97,7 @@ const Header = () => {
           >
             <h3 className="text-header font-subtitle">Connect your wallet</h3>
             <p className="text-body font-capital mt-2 mb-5">Please select a wallet to connect to our site</p>
+            <Close className="min-full h-max cursor-pointer absolute right-5 top-5 w-5" fill="rgba(251, 251, 251, 0.88)" onClick={closeModal}/>
             <div className="flex flex-col">
               <ExtensionLoginButton
                 loginButtonText='MultiversX DeFi Wallet'
