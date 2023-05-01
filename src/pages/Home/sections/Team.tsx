@@ -25,12 +25,14 @@ const Team = () => {
               >
                 <img
                   src={item.imgUrl}
+                  alt=''
                   draggable="false"
                   className="relative w-full px-[16%]"
                 ></img>
                 <div className="aspect-[5/2] relative -mt-[3%]">
                   <img
                     src="/images/box-team.png"
+                    alt=''
                     draggable="false"
                     className="absolute top-0 left-0 w-full h-full"
                   ></img>
@@ -38,7 +40,16 @@ const Team = () => {
                     <div className=" text-lg m-font text-center ">
                       {item.name}
                     </div>
-                    <div className="mt-[3%] text-base text-center">
+                    <div className='flex justify-center items-center gap-2'>
+                      <div className='w-2 h-2 bg-[#f5bc63] rounded-full'></div>
+                      <div className='w-2 h-2 bg-[#f5bc63] rounded-full'></div>
+                      <div className='w-2 h-2 bg-[#f5bc63] rounded-full'></div>
+                      <div className='w-2 h-2 bg-[#f5bc63] rounded-full'></div>
+                      <div className='w-2 h-2 bg-[#f5bc63] rounded-full'></div>
+                      <div className='w-2 h-2 bg-[#f5bc63] rounded-full'></div>
+                      <div className='w-2 h-2 bg-[#f5bc63] rounded-full'></div>
+                    </div>
+                    <div className="mt-[3%] text-sm text-center font-Conthrax">
                       {item.role}
                     </div>
                   </div>

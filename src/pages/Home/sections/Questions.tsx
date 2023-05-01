@@ -20,7 +20,7 @@ const Questions = () => {
           className=" block rotate-180"
         ></img>
       </div>
-      <div className="m-container m-mt flex gap-2 md:gap-3 mx-auto max-w-[800px] w-full flex-col">
+      <div className="m-container m-mt flex gap-2 md:gap-3 mx-auto max-w-[800px] w-full flex-col text-white">
         {mockFaqs.map((item, index) => (
           <Accordion
             title={item.title}

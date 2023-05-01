@@ -59,7 +59,7 @@ const Accordion: React.FC<Props> = ({ title, content, index }) => {
         leaveTo="opacity-0"
       >
         <div
-          className="px-5 pb-3 md:px-7 md:pb-5 text-main/70 text-sm md:text-base"
+          className="px-5 pb-3 md:px-7 md:pb-5 text-white text-sm md:text-base"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </Transition>

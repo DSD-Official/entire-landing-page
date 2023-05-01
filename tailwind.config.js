@@ -33,6 +33,12 @@ module.exports = {
       ll: "1220px",
       xl: { min: "1440px" },
     },
+    fontFamily: {
+      "Conthrax": ["Conthrax"],
+    },
+    letterSpacing: {
+      widest: '.5em',
+    }
   },
   plugins: [],
 };

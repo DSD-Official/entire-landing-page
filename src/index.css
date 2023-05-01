@@ -47,6 +47,9 @@
   .m-text-small {
     @apply text-sm md:text-base lg:text-lg;
   }
+  .m-text-smallest {
+    @apply text-xs md:text-xs lg:text-base;
+  }
   .m-font {
     font-family: "Conthrax";
   }

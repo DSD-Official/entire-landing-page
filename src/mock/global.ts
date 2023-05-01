@@ -12,18 +12,16 @@ export const mockNavbar = [
   { link: "#swap", text: "Swap" },
 ];
 export const mockDescription = {
-  main: `DDog Description here! DDog Description here! DDog Description
-              here! 
-              DDog Description here!`,
+  main: `DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!`,
   about:
     "A collection of 10,000 avatars gives access to the Yard, where players can interact and play for crypto. Stake your NFT for rewards and a chance to hit jackpots!",
   mint: "Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here.Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here. ",
   staking:
     "We offer a liquidity pool for $EBONE and $EGLD, which means that you can stake your coins in our service for a set period of time (staking) or farm them (farming) in order to earn more rewards than you could on exchanges.",
   p2e: `Play games with other DDog owners! Games are secure and results are verifiable on-chain`,
-  roadmap: `Please follow our road map`,
+  roadmap: `Please follow our roadmap`,
   news: "update your news and do not miss your opportunity.",
-  team: "meet our team",
+  team: "DDog teams here",
 };
 export const mockMain = [
   {
@@ -31,7 +29,7 @@ export const mockMain = [
     header2: "dogs club",
     content1: "a web3 gaming hub built by the community",
     content2:
-      "ddog description here!ddog description here!ddog description here!ddog description here!",
+      "DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!",
     button: "CLAIM YOUR XP",
     imgUrl: "/images/Cards.png",
   },
@@ -40,18 +38,18 @@ export const mockMain = [
     header2: "dogs club",
     content1: "a web3 gaming hub built by the community",
     content2:
-      "ddog description here!ddog description here!ddog description here!ddog description here!",
+      "DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!",
     button: "CLAIM YOUR XP",
-    imgUrl: "/images/Cards.png",
+    imgUrl: "/images/Rocket.jpg",
   },
   {
     header1: "downswing",
     header2: "dogs club",
     content1: "a web3 gaming hub built by the community",
     content2:
-      "ddog description here!ddog description here!ddog description here!ddog description here!",
+      "DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!",
     button: "CLAIM YOUR XP",
-    imgUrl: "/images/Cards.png",
+    imgUrl: "/images/Light Cycle.jpg",
   },
 ];
 export const mockRewards = [
@@ -75,28 +73,28 @@ export const mockabout1 = [
   {
     imgUrl: "/images/png/Volume.png",
     name: "Total Volume",
-    amount: "$XXX,XXX",
+    amount: "$0",
   },
   {
     imgUrl: "/images/png/Owners.png",
     name: "Total Owners",
-    amount: "XXX,XXX",
+    amount: "0",
   },
   {
     imgUrl: "/images/png/Treasury.png",
     name: "Treasury",
-    amount: "$XXX,XXX",
+    amount: "$0",
   },
   {
     imgUrl: "/images/png/Staked.png",
     name: "Total Staked",
-    amount: "$XXX,XXX",
+    amount: "$0",
   },
 ];
 export const mockabout2 = {
   imgUrl: "/images/png/EBone.png",
   name: "Total Payouts",
-  amount: "XXX,XXX",
+  amount: "0",
 };
 
 export const mockStaking = [
@@ -207,77 +205,92 @@ export const mockNews = [
 export const mockFaqs = [
   {
     title:
-      "What is the Yard and What is the Yard and what is your yard and what is your yard.",
+      "Q: What is DDog Club?",
     content:
-      "Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Pellentesque in ipsum id orci porta dapibus.",
+      "A: A Web3 social gaming hub built by the community. We chose the term ‘downswing’ with a sense of irony because we hope this protocol will achieve quite the opposite for members",
   },
   {
-    title: "What is the Yard",
+    title: "Q: What is the benefit of being a member?",
     content:
-      "Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Pellentesque in ipsum id orci porta dapibus.",
+      "A: Once you own a DDog NFT, you gain access to the protocol. The protocol allows you to stake your NFT to earn $EBONE, the gaming token that will let you play games and determine player rankings. This protocol is a DAO, which means there is no central authority. The power will be distributed to DDog owners who can vote on the protocol’s direction.",
   },
   {
-    title: "What is the Yard",
+    title: "Q: Tell me more about $EBONE",
     content:
-      "Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Pellentesque in ipsum id orci porta dapibus.",
+      "A: It’s our gaming token that determines player rankings. The only way to get $EBONE is through NFT staking. You can’t buy more $EBONE and there’s no IDO or token unlock - 100% fair emissions rewards. Even the founders have to buy an NFT and stake to earn. Those who are risk tolerant can try to expand their $EBONE bag by betting on Crash, poker or, in the future, DDog racing. Weekly rewards are airdropped to DDog owners based on $EBONE balances, which are burned in exchange for $EGLD.",
   },
   {
-    title: "What is the Yard",
+    title: "Q: Tell me more about Crash",
     content:
-      "Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Pellentesque in ipsum id orci porta dapibus.",
+      "A: Crash is a well known game in which players bet on when the rocket will crash. If a player cashes out before the rocket explodes they win. Our Crash game is different because you can play without betting crypto; you simply wager your $EBONE rewards through NFT staking. Of course you can wager crypto too if you are risk tolerant. Our protocol has about a 3-4% instant Crash rate which is in-line with other Crash games and our max payout is 5000 USDT per game, which is subject to increase once our treasury expands through user engagement",
   },
   {
-    title: "What is the Yard",
+    title: "Q: Tell me more about Poker",
     content:
-      "Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Pellentesque in ipsum id orci porta dapibus.",
+      "A: We are building an online poker protocol that will enjoy the security and speed of the MulitversX blockchain. Our rake will start at 2% capped at $2. We would like to introduce a recurring high hand jackpot, but we will leave it up to the DDog DAO to ultimately decide!",
   },
   {
-    title: "What is the Yard",
+    title: "Q: Tell me more about DDog racing",
     content:
-      "Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Pellentesque in ipsum id orci porta dapibus.",
+      "A: We are building a Tron-inspired racing game where DDog owners train and customize their light cycles to compete against other players. This will take at least another year or two to build",
   },
   {
-    title: "What is the Yard",
+    title: "Q: Who are the founders? What’s your goal?",
     content:
-      "Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Pellentesque in ipsum id orci porta dapibus.",
+      "A: We are a group of Devs who love crypto, gaming and poker. We wanted to initially build on MultiversX because of the strength of community, speed and security, but our protocol will ultimately be blockchain agnostic. Our goal is to build a secure, fair and fun gaming hub where Web3 enthusiasts can socialize and play games of chance and skill. We want the protocol to be self-sustaining and community-led. This means the we will set basic parameters in place so DDog owners will submit and vote on the direction of the protocol.",
+  },
+  {
+    title: "Q: How do I become a member?",
+    content:
+      "A: Mint a DDog NFT! There will be a capped supply of 5000. Mint price is 0.5 EGLD. When you mint a DDog NFT, you will be presented with bonus options - choose wisely!",
+  },
+  {
+    title: "Q: So is this a casino?",
+    content:
+      "A: We want to create a Web3 social gaming hub where players can enjoy competitive games based on skill and chance. We think blockchain technology provides certain advantages to fair and secure gaming that traditional sites lack. A casino is a centralized entity with a statistical edge against players who are trying to ‘beat the house.’ Our protocol fees are programmed to go back to DDog holders each week in the form of rewards so you aren’t playing against a house. We are taking a part of the fees to keep the lights on and using NFT sales to fund ongoing game development",
+  },
+  {
+    title: "Q: Is this protocol secure?",
+    content:
+      "A: Our code has been audited by two independent parties and our randomizations are verifiable on-chain. We also have these two DDog security guards at the entrance so don’t worry. RTA and collusion are ongoing issues in online poker and we think we might have a few solutions so stay tuned!",
   },
 ];
 
 export const mockTeamMain = [
   {
-    imgUrl: "/images/team/nft1.png",
+    imgUrl: "/images/team/BONES.png",
     name: "BONES",
-    role: "CEO/DEVELOPER",
+    role: "DEVELOPER/CEO",
   },
   {
-    imgUrl: "/images/team/nft2.png",
+    imgUrl: "/images/team/YUKI.png",
     name: "YUKI",
-    role: "CTO/DEVELOPER",
+    role: "DEVELOPER/CTO",
   },
   {
-    imgUrl: "/images/team/nft3.png",
+    imgUrl: "/images/team/ANGRY PUPPY.png",
     name: "ANGRY PUPPY",
-    role: "The Design Guru",
+    role: "DEVELOPER/CREATIVE DIRECTOR",
   },
   {
-    imgUrl: "/images/team/nft4.png",
+    imgUrl: "/images/team/JANOMI.png",
     name: "JANOMI",
     role: "SOCIAL MEDIA MANAGER",
   },
   {
-    imgUrl: "/images/team/nft5.png",
+    imgUrl: "/images/team/CHAMOLOGY.png",
     name: "CHAMOLOGY",
     role: "ARTIST/DESIGNER",
   },
   {
-    imgUrl: "/images/team/nft6.png",
+    imgUrl: "/images/team/BADY.png",
     name: "BADY",
     role: "ARTIST/DESIGNER",
   },
   {
-    imgUrl: "/images/team/nft6.png",
+    imgUrl: "/images/team/NINJA.png",
     name: "NINJA",
-    role: "DESIGNER/DIRECTOR",
+    role: "DESIGNER/CREATIVE DIRECTOR",
   },
 ];
 

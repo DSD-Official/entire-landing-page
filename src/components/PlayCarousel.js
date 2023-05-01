@@ -39,7 +39,7 @@ const PlayCarousel = () => {
               draggable="false"
             ></img>
             <div className="m-box top-0 left-[50%] -translate-x-[50%] w-full absolute">
-              <div className="m-text-small uppercase sm:hidden">
+              <div className="m-text-smallest uppercase sm:hidden font-Conthrax tracking-widest">
                 {item.content}
               </div>
             </div>
