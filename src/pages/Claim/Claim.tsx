@@ -29,6 +29,16 @@ const Claim = () => {
     const result = await axios.get("/claim_data/" + address);
     setXp(result.data.xp);
     setClaimData(result.data.status);
+    toast.success('Claiming XP successfully finished!', {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
   };
   const getTableData = async () => {
     const result: any = await axios.get("/claim");
@@ -52,7 +62,6 @@ const Claim = () => {
     return () => {};
   }, []);
   const handleClaim = async () => {
-    console.log(account);
     if (!account.address) {
       toast.warn('Please connect your wallet first!', {
         position: "top-right",
@@ -129,7 +138,8 @@ const Claim = () => {
               <button
                 className={
                   (claimData[6] == true ? "bg-line text-main" : "") +
-                  " mt-8 bg-brand rounded-lg py-3 px-12 text-back font-button hover:opacity-80 anim cursor-pointer"
+                  " mt-8 bg-brand rounded-lg py-3 px-12 text-back font-button " +
+                  (claimData[6] == true ? "cursor-not-allowed" : "hover:opacity-80 anim cursor-pointer")
                 }
                 onClick={() => {
                   handleClaim();
