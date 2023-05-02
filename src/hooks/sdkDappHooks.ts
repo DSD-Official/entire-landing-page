@@ -7,3 +7,4 @@ export { useSignMessage } from '@multiversx/sdk-dapp/hooks/signMessage/useSignMe
 export { useGetActiveTransactionsStatus } from '@multiversx/sdk-dapp/hooks/transactions/useGetActiveTransactionsStatus';
 export { useGetPendingTransactions } from '@multiversx/sdk-dapp/hooks/transactions/useGetPendingTransactions';
 export { useGetNetworkConfig } from '@multiversx/sdk-dapp/hooks/useGetNetworkConfig';
+export { logout } from '@multiversx/sdk-dapp/utils/logout';

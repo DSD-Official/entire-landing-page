@@ -29,16 +29,6 @@ const Claim = () => {
     const result = await axios.get("/claim_data/" + address);
     setXp(result.data.xp);
     setClaimData(result.data.status);
-    toast.success('Claiming XP successfully finished!', {
-      position: "top-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
   };
   const getTableData = async () => {
     const result: any = await axios.get("/claim");
@@ -79,6 +69,16 @@ const Claim = () => {
     const result: any = await axios.post("/claim", { address });
     if (result.data == "already claimed") return;
     else {
+      toast.success('Claiming XP successfully finished!', {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
       getClaimData();
     }
   };

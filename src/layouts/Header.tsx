@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import { LayoutContext } from "./Root";
-import { useGetIsLoggedIn, useGetAccountInfo } from "../hooks";
+import { useGetIsLoggedIn, useGetAccountInfo, logout } from "../hooks";
 import { shortenAddress } from "utils";
 
 import { ReactComponent as Ring } from "assets/svg/ring.svg";
@@ -67,6 +67,10 @@ const Header = () => {
     nativeAuth: true // optional
   };
 
+  const disconnect = () => {
+    logout();
+  }
+
   return (
     <div className="bg-card flex py-[22px] justify-end px-8 items-center gap-6">
       <Menu
@@ -76,7 +80,7 @@ const Header = () => {
       <h3 className="text-header font-input cursor-pointer">Play Poker</h3>
       <Ring className="min-full h-max cursor-pointer"/>
       {account.address ? (
-        <div className="flex items-center gap-2 p-3 border-[3px] border-line rounded-lg">
+        <div className="flex items-center gap-2 p-3 border-[3px] border-line rounded-lg" onClick={disconnect}>
           <Ledger className="w-6 h-6 cursor-pointer" />
           <h5 className="text-body font-button cursor-pointer">{shortenAddress(account.address)}</h5>
           <h4 className="text-header font-button cursor-pointer">
