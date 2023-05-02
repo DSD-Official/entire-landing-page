@@ -75,7 +75,7 @@ const Header = () => {
       />
       <h3 className="text-header font-input cursor-pointer">Play Poker</h3>
       <Ring className="min-full h-max cursor-pointer"/>
-      {isConnected ? (
+      {account.address ? (
         <div className="flex items-center gap-2 p-3 border-[3px] border-line rounded-lg">
           <Ledger className="w-6 h-6 cursor-pointer" />
           <h5 className="text-body font-button cursor-pointer">{shortenAddress(account.address)}</h5>
