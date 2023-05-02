@@ -1,5 +1,8 @@
 import ReactPaginate from "react-paginate";
 import { useState, useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import MainLayout from "layouts/MainLayout";
 import axios from "config/axios";
 import { useGetAccountInfo } from "hooks";
@@ -49,6 +52,20 @@ const Claim = () => {
     return () => {};
   }, []);
   const handleClaim = async () => {
+    console.log(account);
+    if (!account.address) {
+      toast.warn('Please connect your wallet first!', {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+      return;
+    }
     if (claimData[6]) return;
     const result: any = await axios.post("/claim", { address });
     if (result.data == "already claimed") return;
@@ -120,6 +137,7 @@ const Claim = () => {
               >
                 Claim Your Daily XP
               </button>
+              <ToastContainer />
             </div>
           </div>
         </div>
