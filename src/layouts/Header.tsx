@@ -68,7 +68,7 @@ const Header = () => {
   };
 
   const disconnect = () => {
-    logout();
+    logout(window.location.href);
   }
 
   return (
