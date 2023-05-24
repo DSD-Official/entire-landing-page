@@ -67,7 +67,7 @@ const Claim = () => {
     }
     if (claimData[6]) return;
     const result: any = await axios.post("/claim", { address });
-    if (result.data == "already claimed") return;
+    if (result.data === "already claimed") return;
     else {
       toast.success('Claiming XP successfully finished!', {
         position: "top-right",
@@ -137,9 +137,10 @@ const Claim = () => {
             <div className="flex justify-center">
               <button
                 className={
-                  (claimData[6] == true ? "bg-line text-main" : "") +
+                  (claimData[6] === true ? "bg-line text-main" : "") +
                   " mt-8 bg-brand rounded-lg py-3 px-12 text-back font-button " +
-                  (claimData[6] == true ? "cursor-not-allowed" : "hover:opacity-80 anim cursor-pointer")
+                  (claimData[6] === true ? "cursor-not-allowed" : "hover:opacity-80 anim cursor-pointer") +
+                  " z-10"
                 }
                 onClick={() => {
                   handleClaim();

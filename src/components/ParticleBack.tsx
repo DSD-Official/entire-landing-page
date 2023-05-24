@@ -5,7 +5,7 @@ const ParticleBack = () => {
 
   for (let i = 0; i < 100; i++) {
     particleComponent.push(
-      <div key={"particle" + i} className="circle-container ">
+      <div key={"particle" + i} className="circle-container -z-10">
         <div className="circle"></div>
       </div>
     );
