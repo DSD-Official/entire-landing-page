@@ -9,6 +9,7 @@ import Roadmap from "./sections/Roadmap";
 import Team from "./sections/Team";
 import Mint from "./sections/Mint";
 import News from "./sections/News";
+import Claim from "./sections/Claim";
 
 import { ReactComponent as DogFoot } from "assets/svg/dog-foot.svg";
 import { ReactComponent as Loader } from "assets/svg/loader-round.svg";
@@ -33,6 +34,7 @@ const Home = () => {
       <About />
       {/* <Mint />
       <Staking /> */}
+      <Claim />
       <Play />
       <Roadmap />
       <News />

@@ -15,6 +15,7 @@ module.exports = {
       white: "#fff",
       black: "#000",
       chart: "#f5bc63",
+      primary: "#64B999",
     },
     extend: {
       animation: {

@@ -1,19 +1,43 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { ReactComponent as Logo } from "assets/svg/logo.svg";
 import { ReactComponent as Menu } from "assets/svg/menu.svg";
 import { ReactComponent as Cross } from "assets/svg/cross.svg";
-import { ReactComponent as Twitter } from "assets/svg/twitter.svg";
-import { ReactComponent as Discord } from "assets/svg/discord.svg";
+
 import { mockNavbar } from "mock/global";
+import ConnectButton from "components/ConnectButton";
+import WalletConnectModal from "components/WalletConnectModal";
+import { logout, useGetAccountInfo } from "hooks";
+import { shortenAddress } from "utils";
 
 const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const navigate = useNavigate()
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const { account } = useGetAccountInfo();
 
   const toggle = () => {
     setOpen(!open);
   };
+
+  const handleMenuClick = (id: string) => {
+    if (id === "swap" || id === "mint") {
+      navigate(`/${id}`);
+      return
+    }
+    window.scrollTo({ top: document.getElementById(id)?.offsetTop, behavior: 'smooth' });
+  }
+
+  const handleMobileConnect = () => {
+    if (account.address) {
+      toggle();
+      logout();
+      return;
+    }
+    setOpen(false);
+    setIsModalOpen(true);
+  }
 
   return (
     <>
@@ -21,22 +45,19 @@ const Navbar = () => {
         <Link to="/app">
           <Logo className="w-[200px] h-full cursor-pointer" />
         </Link>
-        <div className="hidden md:flex md:gap-4 lg:gap-6 xl:gap-12 items-center">
+        <div className="hidden lg:flex md:gap-4 lg:gap-6 xl:gap-12 items-center">
           {mockNavbar.map((item: any, id: number) => {
             return (
-              <a key={`nav-web-${id}`} href={item.link}>
+              <div key={`nav-web-${id}`} onClick={() => handleMenuClick(item.id)}>
                 <h4 className="cursor-pointer font-button text-header hover:text-brand anim">
                   {item.text}
                 </h4>
-              </a>
+              </div>
             );
           })}
         </div>
-        <div className="justify-end hidden md:flex gap-6">
-          <Twitter className="w-6 h-6 cursor-pointer social-svg" />
-          <Discord className="w-6 h-6 cursor-pointer social-svg" />
-        </div>
-        <Menu className="w-6 h-6 cursor-pointer md:hidden" onClick={toggle} />
+        <ConnectButton />
+        <Menu className="w-6 h-6 cursor-pointer lg:hidden" onClick={toggle} />
       </div>
       {open && (
         <div className="fixed top-0 left-0 z-[1000] flex flex-col items-center justify-center w-full h-full gap-4 nav-blur">
@@ -59,8 +80,12 @@ const Navbar = () => {
               </a>
             );
           })}
+          <h2 className="text-center cursor-pointer text-header hover:text-[#3d4a66] " onClick={handleMobileConnect}>
+            {account.address ? shortenAddress(account.address) : "Connect"}
+          </h2>
         </div>
       )}
+      <WalletConnectModal isOpen={isModalOpen} />
     </>
   );
 };

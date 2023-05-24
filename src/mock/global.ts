@@ -1,15 +1,15 @@
 export const mockNavbar = [
-  { link: "#", text: "Home" },
-  { link: "#about", text: "About" },
+  { link: "#", text: "Home", id: 'home' },
+  { link: "#about", text: "About", id: 'about' },
   // { link: "#mint", text: "NFT Mint" },
   // { link: "#staking", text: "Staking" },
   // { link: "#games", text: "Games" },
-  { link: "#roadmap", text: "Roadmap" },
+  { link: "#roadmap", text: "Roadmap", id: 'roadmap' },
   // { link: "#news", text: "News" },
-  { link: "#faqs", text: "FAQ" },
-  { link: "#mint", text: "Mint" },
-  // { link: "#team", text: "Team" },
-  { link: "#swap", text: "Swap" },
+  { link: "#faqs", text: "FAQ", id: 'faqs' },
+  { link: "#team", text: "Team", id: "team" },
+  { link: "#mint", text: "Mint", id: 'mint' },
+  { link: "#swap", text: "Swap", id: 'swap' },
 ];
 export const mockDescription = {
   main: `DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!`,
@@ -30,7 +30,7 @@ export const mockMain = [
     content1: "a web3 gaming hub built by the community",
     content2:
       "DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!",
-    button: "CLAIM YOUR XP",
+    button: "MINT NFT",
     imgUrl: "/images/Cards.png",
   },
   {
@@ -39,8 +39,8 @@ export const mockMain = [
     content1: "a web3 gaming hub built by the community",
     content2:
       "DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!",
-    button: "CLAIM YOUR XP",
-    imgUrl: "/images/Rocket.jpg",
+    button: "MINT NFT",
+    imgUrl: "/images/Rocket.png",
   },
   {
     header1: "downswing",
@@ -48,8 +48,8 @@ export const mockMain = [
     content1: "a web3 gaming hub built by the community",
     content2:
       "DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!",
-    button: "CLAIM YOUR XP",
-    imgUrl: "/images/Light Cycle.jpg",
+    button: "MINT NFT",
+    imgUrl: "/images/Motorcycle.png",
   },
 ];
 export const mockRewards = [

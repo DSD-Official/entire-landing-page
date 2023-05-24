@@ -39,7 +39,7 @@ const About = () => {
             ></img>
           </div>
         </div>
-        <div className="font-[Conthrax] m-text-large uppercase m-container text-center font-black tracking-normal m-mt">
+        <div className="font-[Conthrax] p-0 text-sm md:text-3xl lg:text-5xl uppercase m-container text-center font-black tracking-[0.25rem] m-mt">
           stake your ddog nft
           <div className="relative">for rewards and airdrops</div>
         </div>

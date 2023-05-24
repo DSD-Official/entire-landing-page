@@ -1,4 +1,4 @@
-import { mockDescription, mockTeamMain, mockTeamArt } from "mock/global";
+import { mockDescription, mockTeamMain } from "mock/global";
 const Team = () => {
   return (
     <div id="team" className="relative w-full m-gap">
@@ -10,6 +10,7 @@ const Team = () => {
           src="/images/header-light.png"
           draggable="false"
           className=" block scale-y-[-1] rotate-180"
+          alt="header-light"
         ></img>
       </div>
       <div className="relative w-full m-container md:text-center">

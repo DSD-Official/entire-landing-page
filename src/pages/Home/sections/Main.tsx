@@ -3,7 +3,7 @@ import MainCarousel from "components/MainCarousel";
 
 const Home = () => {
   return (
-    <div>
+    <div id='home'>
       <img
         src="/images/Header.png"
         className="absolute top-0 left-0 w-full h-auto"

@@ -173,7 +173,7 @@ code {
 .dapp-core-component__main__btn-primary {
   background-color: #1c2230 !important;
   border: none !important;
-  width: 450px;
+  @apply md:w-[450px];
   margin: 10px 0px !important;
   padding: 15px !important;
 }
