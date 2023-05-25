@@ -19,6 +19,7 @@ import {
 const customStyles = {
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    zIndex: 1000,
   },
   content: {
     top: '50%',
@@ -36,9 +37,10 @@ const customStyles = {
 
 interface Props {
   isOpen: boolean
+  onClose?: () => void
 }
 
-const WalletConnectModal: React.FC<Props> = ({ isOpen }) => {
+const WalletConnectModal: React.FC<Props> = ({ isOpen, onClose = () => null }) => {
   const { search } = useLocation();
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
@@ -52,6 +54,7 @@ const WalletConnectModal: React.FC<Props> = ({ isOpen }) => {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    onClose()
   }
 
   const commonProps = {

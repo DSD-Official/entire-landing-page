@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useGetAccountInfo, logout } from "../hooks";
 import { shortenAddress } from "utils";
 
 import { ReactComponent as Ledger } from "assets/svg/ledger.svg";
 
-import WalletConnectModal from "./WalletConnectModal";
+interface ConnectButtonProps {
+  onClick?: () => void
+}
 
-const ConnectButton = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const ConnectButton: React.FC<ConnectButtonProps> = ({ onClick }) => {
   const { account } = useGetAccountInfo();
 
   const connectWallet = () => {
-    setIsModalOpen(true);
+    if (onClick) {
+      onClick()
+    }
   }
 
   const disconnect = () => {
@@ -19,7 +22,7 @@ const ConnectButton = () => {
   }
 
   return (
-    <div className="hidden lg:flex">
+    <div>
       {account.address ? (
         <div className="flex items-center gap-2 p-3 border-[3px] border-line rounded-lg" onClick={disconnect}>
           <Ledger className="w-6 h-6 cursor-pointer" />
@@ -33,7 +36,6 @@ const ConnectButton = () => {
           <button className="bg-brand hover:opacity-70 cursor-pointer anim rounded-[8px] px-5 py-3 text-back font-button" onClick={connectWallet}>
             Connect Wallet
           </button>
-          <WalletConnectModal isOpen={isModalOpen}/>
         </div>
       )}
     </div>

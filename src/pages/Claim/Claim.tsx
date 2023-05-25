@@ -136,11 +136,7 @@ const Claim = () => {
             )}
             <div className="flex justify-center">
               <button
-                className={
-                  "z-10 " + (claimData[6] === true ? "bg-line text-main" : "") +
-                  " mt-8 bg-brand rounded-lg py-3 px-12 text-back font-button " +
-                  (claimData[6] === true ? "cursor-not-allowed" : "hover:opacity-80 anim cursor-pointer")
-                }
+                className={`${(claimData[6] === true ? "bg-line text-main" : "")} mt-8 bg-brand rounded-lg py-3 px-12 text-back font-button ${(claimData[6] === true ? "cursor-not-allowed" : "hover:opacity-80 anim cursor-pointer")} z-10`}
                 onClick={() => {
                   handleClaim();
                 }}
