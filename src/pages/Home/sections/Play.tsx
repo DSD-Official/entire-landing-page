@@ -5,7 +5,7 @@ const Play = () => {
   return (
     <div id="games" className="relative w-full m-gap">
       <div className="m-text-header text-center tracking-[1vw] m-container w-full sm:w-auto">
-        Play & Earn
+        Play & Win
       </div>
       <div className="relative flex justify-end">
         <img

@@ -1,45 +1,31 @@
 // import ParticleBack from "components/ParticleBack";
 import { mockDescription, mockabout1, mockabout2 } from "mock/global";
 import Button from "components/Button";
+import { ReactComponent as Logo } from "assets/svg/logo-new.svg";
+
 const About = () => {
   return (
     <div id="about" className="relative w-full m-gap">
       {/* <ParticleBack></ParticleBack> */}
-      <div>
-        <div className="m-text-header text-left tracking-[1vw] m-container w-full sm:text-center uppercase ">
+      <div className="flex justify-center">
+        <div className="not-italic m-text-header flex flex-row items-center text-center tracking-[1vw] m-container uppercase text-[#43FFC4] gap-5">
+          <span><Logo className="w-10 h-full" /></span>
           About
-        </div>
-        <div>
-          <img
-            src="/images/header-light.png"
-            draggable="false"
-            className=" block rotate-180 xl:w-[450px] lg:w-[350px] md:w-[250px] sm:w-[350px]"
-            alt="light"
-          ></img>
+          <span className="-ml-3"><Logo className="w-10 h-full" /></span>
         </div>
       </div>
 
       <div className="m-container">
-        <div className="flex flex-col-reverse  md:flex-row  justify-between  md:gap-[10%]">
-          <div className="basis-2/5">
-            <div className="m-text-normal text-left m-mt">
-              {mockDescription.about}
-            </div>
-            <div className="flex sm:justify-center mt-10 md:mt-20">
-              <Button className="" text="STAKE NOW"></Button>
-            </div>
+        <div className="flex flex-col items-center md:gap-[10%]">
+          <div className="m-text-large text-center m-mt font-extrabold mx-[15%] leading-normal">
+            A collection of <span className="text-[#43FFC4]">10,000</span> avatars gives access to the <span className="text-[#43FFC4]">Yard</span>, where players can interact and play for crypto. <span className="text-[#43FFC4]">Stake</span> your NFT for rewards and a chance to hit <span className="text-[#43FFC4]">jackpots!</span>
+          </div>
+          <div className="flex sm:justify-center mt-5 md:my-20">
+            <Button className="" text="STAKE NOW"></Button>
           </div>
 
-          <div className="basis-1/3 max-w-[400px] relative md:-mt-48 mt-0 w-full m-auto">
-            <img
-              src="/images/NFT.png"
-              draggable="false"
-              className="w-[100%] h-[100%]"
-              alt="box"
-            ></img>
-          </div>
         </div>
-        <div className="font-[Conthrax] p-0 text-sm md:text-3xl lg:text-5xl uppercase m-container text-center font-black tracking-[0.25rem] m-mt">
+        <div className="font-[Conthrax] p-0 text-sm md:text-3xl lg:text-5xl uppercase m-container text-center font-black tracking-[0.5rem] m-mt">
           stake your ddog nft
           <div className="relative">for rewards and airdrops</div>
         </div>

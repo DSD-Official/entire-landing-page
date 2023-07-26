@@ -24,7 +24,7 @@ const Accordion: React.FC<Props> = ({ title, content, index }) => {
     <>
       <div
         ref={rightRef}
-        className={`border border-1 border-brand rounded-full py-2 px-4 md:py-3 md:px-6 w-full ${
+        className={`border-2 border-brand rounded-full py-2 px-4 md:py-3 md:px-6 w-full ${
           rightViewport.inViewport &&
           rightViewport.enterCount === 1 &&
           "opacity-0 fade-in-right"
@@ -35,15 +35,15 @@ const Accordion: React.FC<Props> = ({ title, content, index }) => {
           className="flex items-center cursor-pointer flex-none"
           onClick={toggle}
         >
-          <span className="m-text-small font-bold text-main/70">{title}</span>
+          <span className="m-text-small font-bold text-main/80">{title}</span>
           {show ? (
             <Minus
-              className="w-6 h-6 ml-auto cursor-pointer flex-none"
+              className="w-6 h-6 ml-auto cursor-pointer flex-none fill-chart"
               onClick={toggle}
             />
           ) : (
             <Plus
-              className="w-6 h-6 ml-auto cursor-pointer flex-none"
+                className="w-6 h-6 ml-auto cursor-pointer flex-none fill-chart"
               onClick={toggle}
             />
           )}

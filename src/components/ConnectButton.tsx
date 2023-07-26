@@ -33,7 +33,7 @@ const ConnectButton: React.FC<ConnectButtonProps> = ({ onClick }) => {
         </div>
       ) : (
         <div>
-          <button className="bg-brand hover:opacity-70 cursor-pointer anim rounded-[8px] px-5 py-3 text-back font-button" onClick={connectWallet}>
+            <button className="bg-[#31C4A2] hover:opacity-70 cursor-pointer anim rounded-[12px] px-3 py-2 text-back font-button" onClick={connectWallet}>
             Connect Wallet
           </button>
         </div>

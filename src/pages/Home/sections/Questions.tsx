@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
 
 import Accordion from "components/Accordion";
+// @ts-ignore
 import { mockFaqs } from "mock/global";
 
 const Questions = () => {
@@ -21,7 +22,7 @@ const Questions = () => {
         ></img>
       </div>
       <div className="m-container m-mt flex gap-2 md:gap-3 mx-auto max-w-[800px] w-full flex-col">
-        {mockFaqs.map((item, index) => (
+        {mockFaqs.map((item, index: number) => (
           <Accordion
             title={item.title}
             content={item.content}

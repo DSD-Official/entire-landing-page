@@ -37,7 +37,7 @@ const Home = () => {
       <Claim />
       <Play />
       <Roadmap />
-      <News />
+      {/* <News /> */}
       <Questions />
       <Team />
       <Footer />

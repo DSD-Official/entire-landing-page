@@ -1,27 +1,27 @@
 export const mockNavbar = [
-  { link: "#", text: "Home", id: 'home' },
-  { link: "#about", text: "About", id: 'about' },
+  { link: "#", text: "HOME", id: 'home' },
+  { link: "#about", text: "ABOUT", id: 'about' },
   // { link: "#mint", text: "NFT Mint" },
   // { link: "#staking", text: "Staking" },
   // { link: "#games", text: "Games" },
-  { link: "#roadmap", text: "Roadmap", id: 'roadmap' },
+  { link: "#roadmap", text: "ROADMAP", id: 'roadmap' },
   // { link: "#news", text: "News" },
   { link: "#faqs", text: "FAQ", id: 'faqs' },
-  { link: "#team", text: "Team", id: "team" },
-  { link: "#mint", text: "Mint", id: 'mint' },
-  { link: "#swap", text: "Swap", id: 'swap' },
+  { link: "#team", text: "TEAM", id: "team" },
+  { link: "#mint", text: "MINT", id: 'mint' },
+  // { link: "#swap", text: "Swap", id: 'swap' },
 ];
 export const mockDescription = {
   main: `DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!`,
   about:
-    "A collection of 10,000 avatars gives access to the Yard, where players can interact and play for crypto. Stake your NFT for rewards and a chance to hit jackpots!",
+      `A collection of 10,000 avatars gives access to the Yard, where players can interact and play for crypto. Stake your NFT for rewards and a chance to hit jackpots!`,
   mint: "Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here.Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here. Mint strategy here. ",
   staking:
     "We offer a liquidity pool for $EBONE and $EGLD, which means that you can stake your coins in our service for a set period of time (staking) or farm them (farming) in order to earn more rewards than you could on exchanges.",
   p2e: `Play games with other DDog owners! Games are secure and results are verifiable on-chain`,
-  roadmap: `Please follow our roadmap`,
+  roadmap: ``,
   news: "update your news and do not miss your opportunity.",
-  team: "DDog teams here",
+  team: "",
 };
 export const mockMain = [
   {
@@ -30,27 +30,27 @@ export const mockMain = [
     content1: "a web3 gaming hub built by the community",
     content2:
       "DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!",
-    button: "MINT NFT",
-    imgUrl: "/images/Cards.png",
-  },
-  {
-    header1: "downswing",
-    header2: "dogs club",
-    content1: "a web3 gaming hub built by the community",
-    content2:
-      "DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!",
-    button: "MINT NFT",
+    button: "MINT NOW",
     imgUrl: "/images/Rocket.png",
   },
-  {
-    header1: "downswing",
-    header2: "dogs club",
-    content1: "a web3 gaming hub built by the community",
-    content2:
-      "DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!",
-    button: "MINT NFT",
-    imgUrl: "/images/Motorcycle.png",
-  },
+  // {
+  //   header1: "downswing",
+  //   header2: "dogs club",
+  //   content1: "a web3 gaming hub built by the community",
+  //   content2:
+  //     "DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!",
+  //   button: "MINT NFT",
+  //   imgUrl: "/images/Rocket.png",
+  // },
+  // {
+  //   header1: "downswing",
+  //   header2: "dogs club",
+  //   content1: "a web3 gaming hub built by the community",
+  //   content2:
+  //     "DDog X Club is a clean collection of cute dogs building a Web3 gaming community unlike any other!",
+  //   button: "MINT NFT",
+  //   imgUrl: "/images/Motorcycle.png",
+  // },
 ];
 export const mockRewards = [
   {
@@ -252,7 +252,7 @@ export const mockFaqs = [
   {
     title: "Q: Is this protocol secure?",
     content:
-      "A: Our code has been audited by two independent parties and our randomizations are verifiable on-chain. We also have these two DDog security guards at the entrance so don’t worry. RTA and collusion are ongoing issues in online poker and we think we might have a few solutions so stay tuned!",
+      "A: Our code has been audited by two independent parties and our randomizations are verifiable on-chain. RTA and collusion are ongoing issues in online poker and we think we might have a few solutions so stay tuned!",
   },
 ];
 
@@ -269,7 +269,7 @@ export const mockTeamMain = [
   },
   {
     imgUrl: "/images/team/ANGRY PUPPY.png",
-    name: "ANGRY PUPPY",
+    name: "HAYATE",
     role: "DEVELOPER/CREATIVE DIRECTOR",
   },
   {

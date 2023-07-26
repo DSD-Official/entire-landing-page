@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import { ReactComponent as Logo } from "assets/svg/logo.svg";
+import { ReactComponent as Logo } from "assets/svg/logo-third.svg";
 import { ReactComponent as Menu } from "assets/svg/menu.svg";
 import { ReactComponent as Cross } from "assets/svg/cross.svg";
 
@@ -43,7 +43,7 @@ const Navbar = () => {
           {mockNavbar.map((item: any, id: number) => {
             return (
               <div key={`nav-web-${id}`} onClick={() => handleMenuClick(item.id)}>
-                <h4 className="cursor-pointer font-button text-header hover:text-brand anim">
+                <h4 className="cursor-pointer text-header hover:text-brand anim font-Conthrax text-sm">
                   {item.text}
                 </h4>
               </div>
@@ -71,7 +71,7 @@ const Navbar = () => {
                     setOpen(false);
                   }}
                 >
-                  <h2 className="text-center cursor-pointer text-header hover:text-[#3d4a66] ">
+                  <h2 className="text-center cursor-pointer text-header hover:text-[#3d4a66] font-Conthrax">
                     {item.text}
                   </h2>
                 </a>
