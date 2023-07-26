@@ -138,20 +138,20 @@ export const mockp2e = [
   {
     id: "001",
     link: "/images/Play Box2.png",
-    content:
-      "Equip your ddog with customizable light cycles and compete on the racetrack for rewards and compete on the racetrack for rewards",
+    content: "",
+      // "Equip your ddog with customizable light cycles and compete on the racetrack for rewards and compete on the racetrack for rewards",
   },
   {
     id: "002",
     link: "/images/Play Box2.png",
-    content:
-      "and compete on the racetrack for rewards Equip your ddog with customizable light cycles ",
+    content: "",
+      // "and compete on the racetrack for rewards Equip your ddog with customizable light cycles ",
   },
   {
     id: "003",
     link: "/images/Play Box2.png",
-    content:
-      "light cycles and compete on the Equip your ddog with customizable racetrack for rewards on the Equip your ddog with customizable on the Equip your ddog with customizable",
+    content: "",
+      // "light cycles and compete on the Equip your ddog with customizable racetrack for rewards on the Equip your ddog with customizable on the Equip your ddog with customizable",
   },
 ];
 export const mockRoadmap = [
