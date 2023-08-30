@@ -3,6 +3,7 @@ import Dashboard from "pages/Dashboard";
 import Home from "pages/Home";
 import Liquidity from "pages/Liquidity";
 import Swap from "pages/Swap";
+import Mint from "pages/Mint";
 import Claim from "pages/Claim/Claim";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DappProvider } from "@multiversx/sdk-dapp/wrappers";
@@ -24,10 +25,11 @@ function App() {
     >
       <TransactionsToastList />
       <NotificationModal />
-      <SignTransactionsModals className='custom-class-for-modals' />
+      <SignTransactionsModals className="custom-class-for-modals" />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/mint" element={<Mint />} />
           <Route path="/claim" element={<Claim />} />
           <Route path="/app" element={<Dashboard />} />
           <Route path="/swap" element={<Swap />} />
