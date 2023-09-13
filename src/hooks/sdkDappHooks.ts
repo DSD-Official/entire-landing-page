@@ -8,3 +8,16 @@ export { useGetActiveTransactionsStatus } from '@multiversx/sdk-dapp/hooks/trans
 export { useGetPendingTransactions } from '@multiversx/sdk-dapp/hooks/transactions/useGetPendingTransactions';
 export { useGetNetworkConfig } from '@multiversx/sdk-dapp/hooks/useGetNetworkConfig';
 export { logout } from '@multiversx/sdk-dapp/utils/logout';
+export { useSignTransactions } from '@multiversx/sdk-dapp/hooks/transactions';
+export {
+  addressIsValid,
+  getAccount,
+  getAccountBalance,
+  getAddress,
+  getLatestNonce,
+  getShardOfAddress,
+  refreshAccount,
+  setNonce,
+  signMessage
+} from '@multiversx/sdk-dapp/utils/account';
+export { sendTransactions } from '@multiversx/sdk-dapp/services/transactions/sendTransactions';

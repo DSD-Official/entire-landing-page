@@ -2,18 +2,22 @@ import ReactPaginate from "react-paginate";
 import { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Address, AddressValue, SmartContract, U64Value, ContractFunction, Interaction, U32Value, TokenTransfer } from "@multiversx/sdk-core";
 
 import Navbar from "layouts/Navbar";
 
 import MainLayout from "layouts/MainLayout";
 import axios from "config/axios";
-import { useGetAccountInfo } from "hooks";
+import { refreshAccount, useGetAccountInfo } from "hooks";
 import { shortenAddress } from "utils";
 import ParticleBack from "components/ParticleBack";
-import MainCarousel from "components/MainCarousel";
+import { MINTING_CONTRACT_ADRESS } from "config";
+import { sendTransactions } from "hooks";
+
 
 const days = ["MON", "TUE", "WED", "THR", "FRI", "SAT", "SUN"];
-const Claim = () => {
+
+const Mint = () => {
   const { account } = useGetAccountInfo();
   const address = account.address;
   const [pageCount, setPageCount] = useState(0);
@@ -29,32 +33,9 @@ const Claim = () => {
     return () => clearInterval(timerClock);
   }, [watingTime]);
 
-  const getClaimData = async () => {
-    const result = await axios.get("/claim_data/" + address);
-    setXp(result.data.xp);
-    setClaimData(result.data.status);
-  };
-  const getTableData = async () => {
-    const result: any = await axios.get("/claim");
-    setTableData(result.data);
-  };
   useEffect(() => {
-    getClaimData();
-    getTableData();
-    setWatingTime(
-      Math.floor(
-        (new Date(
-          new Date().getFullYear(),
-          new Date().getMonth(),
-          new Date().getDate() + 1
-        ).getTime() -
-          new Date().getTime()) /
-          1000
-      )
-    );
-    setPageCount(1);
-    return () => {};
   }, []);
+
   const handleClaim = async () => {
     if (!account.address) {
       toast.warn("Please connect your wallet first!", {
@@ -83,9 +64,37 @@ const Claim = () => {
         progress: undefined,
         theme: "colored",
       });
-      getClaimData();
     }
   };
+
+  const handleMint = async () => {
+    await refreshAccount();
+    if (!account.address) {
+      toast.warn("Please connect your wallet first!", {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+      return;
+    }
+
+
+    const mintTransaction = {
+      value: 0.005 * 3 * 10 ** 18,
+      data: 'mint@03',
+      receiver: MINTING_CONTRACT_ADRESS,
+      gasLimit: '60000000'
+    };
+    await sendTransactions({
+      transactions: mintTransaction,
+    });
+  };
+
   const handlePageClick = (e: any) => {
     setItemOffset(e.selected + 1);
   };
@@ -173,6 +182,7 @@ const Claim = () => {
             <img
               className="z-50 w-[30%] border-4 border-[#00FFFF] rounded-xl absolute bottom-0 md:bottom-12 cursor-pointer"
               src="/images/mint.png"
+              onClick={handleMint}
             ></img>
           </div>
         </div>
@@ -181,4 +191,4 @@ const Claim = () => {
   );
 };
 
-export default Claim;
+export default Mint;

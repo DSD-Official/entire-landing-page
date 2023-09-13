@@ -10,13 +10,13 @@ import { DappProvider } from "@multiversx/sdk-dapp/wrappers";
 import { TransactionsToastList } from "@multiversx/sdk-dapp/UI/TransactionsToastList";
 import { SignTransactionsModals } from "@multiversx/sdk-dapp/UI/SignTransactionsModals";
 import { NotificationModal } from "@multiversx/sdk-dapp/UI/NotificationModal";
-
 import { walletConnectV2ProjectId, apiTimeout } from "config";
+import { CHAIN_TYPE } from "config";
 
 function App() {
   return (
     <DappProvider
-      environment="devnet"
+      environment={CHAIN_TYPE}
       customNetworkConfig={{
         name: "customConfig",
         walletConnectV2ProjectId,
