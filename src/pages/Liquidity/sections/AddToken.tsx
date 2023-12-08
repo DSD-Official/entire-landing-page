@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ReactComponent as EGLD } from "assets/svg/egld.svg";
+import { ReactComponent as EGLD } from "assets/svg/EGLD.svg";
 import { ReactComponent as PLUS } from "assets/svg/plus.svg";
 import { ReactComponent as EBONE } from "assets/svg/cat-foot.svg";
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ReactComponent as EGLD } from "assets/svg/egld.svg";
+import { ReactComponent as EGLD } from "assets/svg/EGLD.svg";
 import { ReactComponent as INFO } from "assets/svg/info.svg";
 
 const LiquidityDetail = () => {
